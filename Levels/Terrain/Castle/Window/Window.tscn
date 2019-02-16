@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Levels/Terrain/Base/BaseBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/Terrain/Castle/Window/Window.gd" type="Script" id=2]
+[ext_resource path="res://Levels/Terrain/Castle/Window/Window_right.png" type="Texture" id=3]
+[ext_resource path="res://Levels/Terrain/Castle/Window/Window_left.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+extents = Vector2( 4, 16 )
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "windowOpen"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="Window" index="0" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+z_index = 1
+texture = ExtResource( 3 )
+hframes = 3
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+texture = ExtResource( 4 )
+hframes = 3
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2( -3, 0 )
+shape = SubResource( 1 )
+
+[node name="WindowOpen" type="AnimationPlayer" parent="." index="5"]
+anims/windowOpen = SubResource( 2 )
+

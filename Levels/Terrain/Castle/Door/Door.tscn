@@ -7,7 +7,7 @@
 
 extents = Vector2( 7, 16 )
 
-[node name="Door" instance=ExtResource( 1 )]
+[node name="Door" index="0" instance=ExtResource( 1 )]
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
