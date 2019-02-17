@@ -8,4 +8,5 @@
 [node name="Sprite" parent="." index="0"]
 position = Vector2( 0, -8 )
 texture = ExtResource( 2 )
+hframes = 2
 

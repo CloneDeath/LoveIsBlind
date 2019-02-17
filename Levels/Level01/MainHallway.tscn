@@ -1,13 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Levels/Terrain/Castle/Bricks/Bricks.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Terrain/Castle/CastleBlock.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/Terrain/Castle/Door/Door.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Levels/Terrain/EventText/SingleTriggerText.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/Terrain/Castle/IronGate/IronGate.png" type="Texture" id=4]
+[ext_resource path="res://Levels/Terrain/EventText/SingleTriggerText.tscn" type="PackedScene" id=5]
 
 [node name="MainHallway" type="Node2D"]
 
 [node name="Decorations" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 16, 0 )
 
 [node name="Bricks" parent="Decorations" instance=ExtResource( 1 )]
@@ -51,11 +53,27 @@ brick_index = 4
 [node name="Bricks11" parent="Decorations" instance=ExtResource( 1 )]
 position = Vector2( -48, 448 )
 
+[node name="Bricks12" parent="Decorations" instance=ExtResource( 1 )]
+position = Vector2( 16, 464 )
+brick_index = 3
+
+[node name="Bricks13" parent="Decorations" instance=ExtResource( 1 )]
+position = Vector2( 64, 496 )
+brick_index = 4
+
+[node name="Bricks14" parent="Decorations" instance=ExtResource( 1 )]
+position = Vector2( 80, 544 )
+brick_index = 1
+
+[node name="Bricks15" parent="Decorations" instance=ExtResource( 1 )]
+position = Vector2( 112, 560 )
+brick_index = 2
+
+[node name="Bricks16" parent="Decorations" instance=ExtResource( 1 )]
+position = Vector2( 144, 576 )
+
 [node name="Blocks" type="Node2D" parent="."]
 editor/display_folded = true
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CastleBlock40" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( -240, 480 )
@@ -199,37 +217,166 @@ position = Vector2( -32, 480 )
 position = Vector2( -16, 432 )
 
 [node name="CastleBlock275" parent="Blocks" instance=ExtResource( 2 )]
-position = Vector2( 32, 496 )
+position = Vector2( 32, 512 )
 
 [node name="CastleBlock103" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 0, 432 )
 
 [node name="CastleBlock273" parent="Blocks" instance=ExtResource( 2 )]
-position = Vector2( 48, 496 )
+position = Vector2( 48, 512 )
 
 [node name="CastleBlock104" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 16, 432 )
 
 [node name="CastleBlock274" parent="Blocks" instance=ExtResource( 2 )]
-position = Vector2( 64, 496 )
+position = Vector2( 64, 528 )
+
+[node name="CastleBlock292" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 112, 576 )
+
+[node name="CastleBlock301" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 128, 480 )
+
+[node name="CastleBlock305" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 176, 528 )
 
 [node name="CastleBlock105" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 32, 432 )
 
 [node name="CastleBlock270" parent="Blocks" instance=ExtResource( 2 )]
-position = Vector2( 80, 496 )
+position = Vector2( 48, 528 )
+
+[node name="CastleBlock271" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 96, 576 )
+
+[node name="CastleBlock302" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 112, 480 )
+
+[node name="CastleBlock313" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 160, 528 )
 
 [node name="CastleBlock106" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 48, 432 )
 
 [node name="CastleBlock272" parent="Blocks" instance=ExtResource( 2 )]
-position = Vector2( 96, 496 )
+position = Vector2( 64, 544 )
+
+[node name="CastleBlock294" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 112, 592 )
+
+[node name="CastleBlock300" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 128, 496 )
+
+[node name="CastleBlock312" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 176, 544 )
+
+[node name="CastleBlock279" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 16, 512 )
+
+[node name="CastleBlock280" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 32, 528 )
+
+[node name="CastleBlock290" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 80, 576 )
+
+[node name="CastleBlock296" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 96, 480 )
+
+[node name="CastleBlock307" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 144, 528 )
+
+[node name="CastleBlock281" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 48, 544 )
+
+[node name="CastleBlock289" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 96, 592 )
+
+[node name="CastleBlock303" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 112, 496 )
+
+[node name="CastleBlock308" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 160, 544 )
+
+[node name="CastleBlock282" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 64, 560 )
+
+[node name="CastleBlock293" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 112, 608 )
+
+[node name="CastleBlock316" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 160, 608 )
+
+[node name="CastleBlock317" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 128, 624 )
+
+[node name="CastleBlock321" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 176, 624 )
+
+[node name="CastleBlock304" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 128, 512 )
+
+[node name="CastleBlock311" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 176, 560 )
+
+[node name="CastleBlock286" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 80, 560 )
+
+[node name="CastleBlock288" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 128, 608 )
+
+[node name="CastleBlock314" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 176, 608 )
+
+[node name="CastleBlock318" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 144, 624 )
+
+[node name="CastleBlock322" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 624 )
+
+[node name="CastleBlock297" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 144, 512 )
+
+[node name="CastleBlock309" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 560 )
+
+[node name="CastleBlock287" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 96, 560 )
+
+[node name="CastleBlock291" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 144, 608 )
+
+[node name="CastleBlock315" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 608 )
+
+[node name="CastleBlock319" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 160, 624 )
+
+[node name="CastleBlock320" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 624 )
+
+[node name="CastleBlock323" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 608 )
+
+[node name="CastleBlock299" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 160, 512 )
+
+[node name="CastleBlock306" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 560 )
 
 [node name="CastleBlock107" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 64, 432 )
 
 [node name="CastleBlock276" parent="Blocks" instance=ExtResource( 2 )]
-position = Vector2( 112, 496 )
+position = Vector2( 80, 544 )
+
+[node name="CastleBlock295" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 128, 592 )
+
+[node name="CastleBlock298" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 144, 496 )
+
+[node name="CastleBlock310" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 544 )
 
 [node name="CastleBlock108" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 80, 432 )
@@ -298,7 +445,19 @@ position = Vector2( -16, 368 )
 position = Vector2( -32, 368 )
 
 [node name="CastleBlock100" parent="Blocks" instance=ExtResource( 2 )]
-position = Vector2( 32, 480 )
+position = Vector2( 32, 496 )
+
+[node name="CastleBlock113" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 64, 448 )
+
+[node name="CastleBlock114" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 80, 464 )
+
+[node name="CastleBlock115" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 96, 464 )
+
+[node name="CastleBlock116" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 112, 464 )
 
 [node name="CastleBlock78" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( -64, 432 )
@@ -403,10 +562,20 @@ position = Vector2( -64, 352 )
 position = Vector2( -48, 352 )
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
+editor/display_folded = true
 position = Vector2( 0, 464 )
-locked = true
 
-[node name="HurtHim" parent="." instance=ExtResource( 4 )]
+[node name="Sprite" parent="Door" index="0"]
+texture = ExtResource( 4 )
+
+[node name="Door2" parent="." instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( 192, 592 )
+
+[node name="Sprite" parent="Door2" index="0"]
+texture = ExtResource( 4 )
+
+[node name="HurtHim" parent="." instance=ExtResource( 5 )]
 editor/display_folded = true
 position = Vector2( -208, 464 )
 
@@ -418,5 +587,22 @@ margin_bottom = 39.0
 text = "I hope he's
 alright"
 
+[node name="SingleTriggerText" parent="." instance=ExtResource( 5 )]
+position = Vector2( -32, 464 )
+
+[node name="EventText" parent="SingleTriggerText" index="1"]
+margin_left = -45.5585
+margin_top = 9.05901
+margin_right = 89.4415
+margin_bottom = 32.059
+text = "It's been years since
+I've entered the dungeons"
+
+
+[editable path="Door"]
+
+[editable path="Door2"]
 
 [editable path="HurtHim"]
+
+[editable path="SingleTriggerText"]
