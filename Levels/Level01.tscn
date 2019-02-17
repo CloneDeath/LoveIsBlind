@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Levels/BaseLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Terrain/Castle/CastleBlock.tscn" type="PackedScene" id=2]
@@ -6,45 +6,11 @@
 [ext_resource path="res://Levels/Terrain/Castle/Nightstand/Nightstand.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/Terrain/Castle/Window/Window.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/Terrain/Castle/Door/Door.tscn" type="PackedScene" id=6]
-[ext_resource path="res://NeekoFont.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://Levels/Terrain/Outside/GrassBlock.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Levels/Terrain/Outside/GrassBlock.tscn" type="PackedScene" id=7]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 
-font_data = ExtResource( 7 )
-
-[sub_resource type="Animation" id=2]
-
-resource_name = "hidden"
-tracks/0/type = "value"
-tracks/0/path = NodePath("ItsLocked:custom_colors/font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 0.764706, 0.639216, 0.541176, 0 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-
-resource_name = "reveal"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("ItsLocked:custom_colors/font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 0.764706, 0.639216, 0.541176, 0 ), Color( 0.764706, 0.639216, 0.541176, 1 ), Color( 0.764706, 0.639216, 0.541176, 1 ), Color( 0.764706, 0.639216, 0.541176, 0 ) ]
-}
+points = PoolVector2Array( -8, -5, 8, -8, 8, 8, -8, 8 )
 
 [node name="BaseLevel" instance=ExtResource( 1 )]
 
@@ -52,6 +18,7 @@ tracks/0/keys = {
 editor/display_folded = true
 
 [node name="Walls" type="Node2D" parent="Bedroom" index="0"]
+editor/display_folded = true
 
 [node name="CastleBlock" parent="Bedroom/Walls" index="0" instance=ExtResource( 2 )]
 position = Vector2( 32, 144 )
@@ -264,188 +231,372 @@ frame = 1
 [node name="Door" parent="Bedroom" index="5" groups=[
 "block",
 ] instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 168, 120 )
+locked = true
 
-[node name="ItsLocked" type="Label" parent="Bedroom/Door" index="4"]
-margin_left = -24.0
-margin_top = 16.0
-margin_right = 25.0
-margin_bottom = 30.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.764706, 0.639216, 0.541176, 0 )
-text = "It's locked"
+[node name="Door" parent="Bedroom/Door" index="6" instance=ExtResource( 6 )]
+position = Vector2( -128, 128 )
 
-[node name="LabelShow" type="AnimationPlayer" parent="Bedroom/Door" index="5"]
-autoplay = "hidden"
-playback_default_blend_time = 2.0
-anims/hidden = SubResource( 2 )
-anims/reveal = SubResource( 3 )
+[node name="Shed" type="Node2D" parent="." index="1"]
+editor/display_folded = true
 
-[node name="CastleWall" type="Node2D" parent="." index="1"]
-
-[node name="CastleBlock63" parent="CastleWall" index="0" instance=ExtResource( 2 )]
+[node name="CastleBlock63" parent="Shed" index="0" instance=ExtResource( 2 )]
 position = Vector2( 16, 176 )
 
-[node name="CastleBlock64" parent="CastleWall" index="1" instance=ExtResource( 2 )]
+[node name="CastleBlock64" parent="Shed" index="1" instance=ExtResource( 2 )]
 position = Vector2( 16, 192 )
 
-[node name="CastleBlock65" parent="CastleWall" index="2" instance=ExtResource( 2 )]
+[node name="CastleBlock65" parent="Shed" index="2" instance=ExtResource( 2 )]
 position = Vector2( 16, 208 )
 
-[node name="CastleBlock66" parent="CastleWall" index="3" instance=ExtResource( 2 )]
+[node name="CastleBlock66" parent="Shed" index="3" instance=ExtResource( 2 )]
 position = Vector2( 16, 224 )
 
-[node name="CastleBlock67" parent="CastleWall" index="4" instance=ExtResource( 2 )]
-position = Vector2( 16, 240 )
-
-[node name="CastleBlock68" parent="CastleWall" index="5" instance=ExtResource( 2 )]
-position = Vector2( 16, 256 )
-
-[node name="CastleBlock69" parent="CastleWall" index="6" instance=ExtResource( 2 )]
+[node name="CastleBlock69" parent="Shed" index="4" instance=ExtResource( 2 )]
 position = Vector2( 16, 272 )
 
-[node name="CastleBlock70" parent="CastleWall" index="7" instance=ExtResource( 2 )]
+[node name="CollisionShape2D" parent="Shed/CastleBlock69" index="1"]
+shape = SubResource( 1 )
+
+[node name="PlayerDetection" parent="Shed/CastleBlock69" index="2"]
+editor/display_folded = true
+
+[node name="CastleBlock70" parent="Shed" index="5" instance=ExtResource( 2 )]
 position = Vector2( 32, 176 )
 
-[node name="CastleBlock71" parent="CastleWall" index="8" instance=ExtResource( 2 )]
+[node name="CastleBlock71" parent="Shed" index="6" instance=ExtResource( 2 )]
 position = Vector2( 32, 192 )
 
-[node name="CastleBlock72" parent="CastleWall" index="9" instance=ExtResource( 2 )]
+[node name="CastleBlock72" parent="Shed" index="7" instance=ExtResource( 2 )]
 position = Vector2( 32, 208 )
 
-[node name="CastleBlock73" parent="CastleWall" index="10" instance=ExtResource( 2 )]
+[node name="CastleBlock73" parent="Shed" index="8" instance=ExtResource( 2 )]
 position = Vector2( 32, 224 )
 
-[node name="CastleBlock74" parent="CastleWall" index="11" instance=ExtResource( 2 )]
-position = Vector2( 32, 240 )
+[node name="CastleBlock74" parent="Shed" index="9" instance=ExtResource( 2 )]
+position = Vector2( 48, 208 )
 
-[node name="CastleBlock75" parent="CastleWall" index="12" instance=ExtResource( 2 )]
-position = Vector2( 32, 256 )
+[node name="CastleBlock75" parent="Shed" index="10" instance=ExtResource( 2 )]
+position = Vector2( 48, 224 )
 
-[node name="CastleBlock76" parent="CastleWall" index="13" instance=ExtResource( 2 )]
+[node name="CastleBlock76" parent="Shed" index="11" instance=ExtResource( 2 )]
 position = Vector2( 32, 272 )
 
+[node name="CastleBlock77" parent="Shed" index="12" instance=ExtResource( 2 )]
+position = Vector2( 48, 272 )
+
+[node name="CastleBlock79" parent="Shed" index="13" instance=ExtResource( 2 )]
+position = Vector2( 64, 272 )
+
+[node name="CastleBlock80" parent="Shed" index="14" instance=ExtResource( 2 )]
+position = Vector2( 64, 288 )
+
+[node name="CastleBlock81" parent="Shed" index="15" instance=ExtResource( 2 )]
+position = Vector2( 80, 272 )
+
+[node name="CastleBlock82" parent="Shed" index="16" instance=ExtResource( 2 )]
+position = Vector2( 80, 288 )
+
+[node name="CastleBlock87" parent="Shed" index="17" instance=ExtResource( 2 )]
+position = Vector2( 96, 288 )
+
+[node name="CastleBlock88" parent="Shed" index="18" instance=ExtResource( 2 )]
+position = Vector2( 96, 304 )
+
+[node name="CastleBlock89" parent="Shed" index="19" instance=ExtResource( 2 )]
+position = Vector2( 112, 304 )
+
+[node name="CastleBlock90" parent="Shed" index="20" instance=ExtResource( 2 )]
+position = Vector2( 112, 320 )
+
+[node name="CastleBlock91" parent="Shed" index="21" instance=ExtResource( 2 )]
+position = Vector2( 80, 304 )
+
+[node name="CastleBlock92" parent="Shed" index="22" instance=ExtResource( 2 )]
+position = Vector2( 96, 320 )
+
+[node name="CastleBlock93" parent="Shed" index="23" instance=ExtResource( 2 )]
+position = Vector2( 128, 304 )
+
+[node name="CastleBlock94" parent="Shed" index="24" instance=ExtResource( 2 )]
+position = Vector2( 128, 320 )
+
+[node name="CastleBlock95" parent="Shed" index="25" instance=ExtResource( 2 )]
+position = Vector2( 144, 304 )
+
+[node name="CastleBlock111" parent="Shed" index="26" instance=ExtResource( 2 )]
+position = Vector2( 160, 304 )
+
+[node name="CastleBlock112" parent="Shed" index="27" instance=ExtResource( 2 )]
+position = Vector2( 160, 320 )
+
+[node name="CastleBlock113" parent="Shed" index="28" instance=ExtResource( 2 )]
+position = Vector2( 176, 320 )
+
+[node name="CastleBlock114" parent="Shed" index="29" instance=ExtResource( 2 )]
+position = Vector2( 176, 304 )
+
+[node name="CastleBlock115" parent="Shed" index="30" instance=ExtResource( 2 )]
+position = Vector2( 192, 288 )
+
+[node name="CastleBlock116" parent="Shed" index="31" instance=ExtResource( 2 )]
+position = Vector2( 192, 272 )
+
+[node name="CastleBlock117" parent="Shed" index="32" instance=ExtResource( 2 )]
+position = Vector2( 192, 256 )
+
+[node name="CastleBlock118" parent="Shed" index="33" instance=ExtResource( 2 )]
+position = Vector2( 192, 304 )
+
+[node name="CastleBlock119" parent="Shed" index="34" instance=ExtResource( 2 )]
+position = Vector2( 192, 320 )
+
+[node name="CastleBlock120" parent="Shed" index="35" instance=ExtResource( 2 )]
+position = Vector2( 208, 320 )
+
+[node name="CastleBlock121" parent="Shed" index="36" instance=ExtResource( 2 )]
+position = Vector2( 208, 304 )
+
+[node name="CastleBlock122" parent="Shed" index="37" instance=ExtResource( 2 )]
+position = Vector2( 208, 288 )
+
+[node name="CastleBlock123" parent="Shed" index="38" instance=ExtResource( 2 )]
+position = Vector2( 208, 272 )
+
+[node name="CastleBlock124" parent="Shed" index="39" instance=ExtResource( 2 )]
+position = Vector2( 208, 256 )
+
+[node name="CastleBlock125" parent="Shed" index="40" instance=ExtResource( 2 )]
+position = Vector2( 208, 240 )
+
+[node name="CastleBlock126" parent="Shed" index="41" instance=ExtResource( 2 )]
+position = Vector2( 192, 240 )
+
+[node name="CastleBlock96" parent="Shed" index="42" instance=ExtResource( 2 )]
+position = Vector2( 144, 320 )
+
+[node name="CastleBlock83" parent="Shed" index="43" instance=ExtResource( 2 )]
+position = Vector2( 64, 224 )
+
+[node name="CastleBlock84" parent="Shed" index="44" instance=ExtResource( 2 )]
+position = Vector2( 64, 208 )
+
+[node name="CastleBlock85" parent="Shed" index="45" instance=ExtResource( 2 )]
+position = Vector2( 80, 224 )
+
+[node name="CastleBlock97" parent="Shed" index="46" instance=ExtResource( 2 )]
+position = Vector2( 96, 224 )
+
+[node name="CastleBlock98" parent="Shed" index="47" instance=ExtResource( 2 )]
+position = Vector2( 112, 224 )
+
+[node name="CastleBlock99" parent="Shed" index="48" instance=ExtResource( 2 )]
+position = Vector2( 96, 208 )
+
+[node name="CastleBlock100" parent="Shed" index="49" instance=ExtResource( 2 )]
+position = Vector2( 112, 208 )
+
+[node name="CastleBlock101" parent="Shed" index="50" instance=ExtResource( 2 )]
+position = Vector2( 128, 208 )
+
+[node name="CastleBlock102" parent="Shed" index="51" instance=ExtResource( 2 )]
+position = Vector2( 128, 224 )
+
+[node name="CastleBlock103" parent="Shed" index="52" instance=ExtResource( 2 )]
+position = Vector2( 144, 224 )
+
+[node name="CastleBlock104" parent="Shed" index="53" instance=ExtResource( 2 )]
+position = Vector2( 144, 208 )
+
+[node name="CastleBlock105" parent="Shed" index="54" instance=ExtResource( 2 )]
+position = Vector2( 144, 240 )
+
+[node name="CastleBlock106" parent="Shed" index="55" instance=ExtResource( 2 )]
+position = Vector2( 160, 240 )
+
+[node name="CastleBlock107" parent="Shed" index="56" instance=ExtResource( 2 )]
+position = Vector2( 160, 224 )
+
+[node name="CastleBlock108" parent="Shed" index="57" instance=ExtResource( 2 )]
+position = Vector2( 160, 256 )
+
+[node name="CastleBlock109" parent="Shed" index="58" instance=ExtResource( 2 )]
+position = Vector2( 176, 256 )
+
+[node name="CastleBlock110" parent="Shed" index="59" instance=ExtResource( 2 )]
+position = Vector2( 176, 240 )
+
+[node name="CastleBlock86" parent="Shed" index="60" instance=ExtResource( 2 )]
+position = Vector2( 80, 208 )
+
+[node name="CastleBlock78" parent="Shed" index="61" instance=ExtResource( 2 )]
+position = Vector2( 48, 288 )
+
 [node name="Princess" parent="." index="2"]
+editor/display_folded = true
 position = Vector2( 48, 136 )
 
-[node name="GrassBlock" parent="." index="3" instance=ExtResource( 8 )]
+[node name="Garden" type="Node2D" parent="." index="3"]
+editor/display_folded = true
+
+[node name="GrassBlock" parent="Garden" index="0" instance=ExtResource( 7 )]
 position = Vector2( 0, 272 )
 
-[node name="GrassBlock2" parent="." index="4" instance=ExtResource( 8 )]
+[node name="GrassBlock2" parent="Garden" index="1" instance=ExtResource( 7 )]
 position = Vector2( -16, 272 )
 
-[node name="GrassBlock3" parent="." index="5" instance=ExtResource( 8 )]
+[node name="GrassBlock3" parent="Garden" index="2" instance=ExtResource( 7 )]
 position = Vector2( -32, 272 )
 
-[node name="GrassBlock4" parent="." index="6" instance=ExtResource( 8 )]
+[node name="GrassBlock4" parent="Garden" index="3" instance=ExtResource( 7 )]
 position = Vector2( -48, 272 )
 
-[node name="GrassBlock5" parent="." index="7" instance=ExtResource( 8 )]
+[node name="GrassBlock5" parent="Garden" index="4" instance=ExtResource( 7 )]
 position = Vector2( -64, 272 )
 
-[node name="GrassBlock6" parent="." index="8" instance=ExtResource( 8 )]
+[node name="GrassBlock6" parent="Garden" index="5" instance=ExtResource( 7 )]
 position = Vector2( -80, 272 )
 
-[node name="GrassBlock7" parent="." index="9" instance=ExtResource( 8 )]
+[node name="GrassBlock7" parent="Garden" index="6" instance=ExtResource( 7 )]
 position = Vector2( -96, 272 )
 
-[node name="GrassBlock8" parent="." index="10" instance=ExtResource( 8 )]
+[node name="GrassBlock8" parent="Garden" index="7" instance=ExtResource( 7 )]
 position = Vector2( -112, 272 )
 
-[node name="GrassBlock9" parent="." index="11" instance=ExtResource( 8 )]
+[node name="GrassBlock9" parent="Garden" index="8" instance=ExtResource( 7 )]
 position = Vector2( -112, 288 )
 
-[node name="GrassBlock10" parent="." index="12" instance=ExtResource( 8 )]
+[node name="GrassBlock10" parent="Garden" index="9" instance=ExtResource( 7 )]
 position = Vector2( -96, 288 )
 
-[node name="GrassBlock11" parent="." index="13" instance=ExtResource( 8 )]
+[node name="GrassBlock11" parent="Garden" index="10" instance=ExtResource( 7 )]
 position = Vector2( -80, 288 )
 
-[node name="GrassBlock12" parent="." index="14" instance=ExtResource( 8 )]
+[node name="GrassBlock12" parent="Garden" index="11" instance=ExtResource( 7 )]
 position = Vector2( -64, 288 )
 
-[node name="GrassBlock13" parent="." index="15" instance=ExtResource( 8 )]
+[node name="GrassBlock13" parent="Garden" index="12" instance=ExtResource( 7 )]
 position = Vector2( -48, 288 )
 
-[node name="GrassBlock14" parent="." index="16" instance=ExtResource( 8 )]
+[node name="GrassBlock14" parent="Garden" index="13" instance=ExtResource( 7 )]
 position = Vector2( -32, 288 )
 
-[node name="GrassBlock15" parent="." index="17" instance=ExtResource( 8 )]
+[node name="GrassBlock15" parent="Garden" index="14" instance=ExtResource( 7 )]
 position = Vector2( -16, 288 )
 
-[node name="GrassBlock16" parent="." index="18" instance=ExtResource( 8 )]
+[node name="GrassBlock16" parent="Garden" index="15" instance=ExtResource( 7 )]
 position = Vector2( 0, 288 )
 
-[node name="GrassBlock17" parent="." index="19" instance=ExtResource( 8 )]
+[node name="GrassBlock17" parent="Garden" index="16" instance=ExtResource( 7 )]
 position = Vector2( 16, 288 )
 
-[node name="GrassBlock18" parent="." index="20" instance=ExtResource( 8 )]
+[node name="GrassBlock18" parent="Garden" index="17" instance=ExtResource( 7 )]
 position = Vector2( 32, 288 )
 
-[node name="GrassBlock19" parent="." index="21" instance=ExtResource( 8 )]
+[node name="GrassBlock19" parent="Garden" index="18" instance=ExtResource( 7 )]
 position = Vector2( -128, 288 )
 
-[node name="GrassBlock20" parent="." index="22" instance=ExtResource( 8 )]
+[node name="GrassBlock20" parent="Garden" index="19" instance=ExtResource( 7 )]
 position = Vector2( -128, 304 )
 
-[node name="GrassBlock21" parent="." index="23" instance=ExtResource( 8 )]
+[node name="GrassBlock21" parent="Garden" index="20" instance=ExtResource( 7 )]
 position = Vector2( -112, 304 )
 
-[node name="GrassBlock22" parent="." index="24" instance=ExtResource( 8 )]
+[node name="GrassBlock22" parent="Garden" index="21" instance=ExtResource( 7 )]
 position = Vector2( -144, 288 )
 
-[node name="GrassBlock23" parent="." index="25" instance=ExtResource( 8 )]
+[node name="GrassBlock23" parent="Garden" index="22" instance=ExtResource( 7 )]
 position = Vector2( -144, 304 )
 
-[node name="GrassBlock24" parent="." index="26" instance=ExtResource( 8 )]
+[node name="GrassBlock24" parent="Garden" index="23" instance=ExtResource( 7 )]
 position = Vector2( -160, 288 )
 
-[node name="GrassBlock25" parent="." index="27" instance=ExtResource( 8 )]
+[node name="GrassBlock25" parent="Garden" index="24" instance=ExtResource( 7 )]
 position = Vector2( -160, 304 )
 
-[node name="GrassBlock26" parent="." index="28" instance=ExtResource( 8 )]
+[node name="GrassBlock26" parent="Garden" index="25" instance=ExtResource( 7 )]
 position = Vector2( -176, 304 )
 
-[node name="GrassBlock27" parent="." index="29" instance=ExtResource( 8 )]
+[node name="GrassBlock27" parent="Garden" index="26" instance=ExtResource( 7 )]
 position = Vector2( -176, 320 )
 
-[node name="GrassBlock28" parent="." index="30" instance=ExtResource( 8 )]
+[node name="GrassBlock28" parent="Garden" index="27" instance=ExtResource( 7 )]
 position = Vector2( -160, 320 )
 
-[node name="GrassBlock29" parent="." index="31" instance=ExtResource( 8 )]
+[node name="GrassBlock29" parent="Garden" index="28" instance=ExtResource( 7 )]
 position = Vector2( -192, 336 )
 
-[node name="GrassBlock30" parent="." index="32" instance=ExtResource( 8 )]
+[node name="GrassBlock30" parent="Garden" index="29" instance=ExtResource( 7 )]
 position = Vector2( -176, 336 )
 
-[node name="GrassBlock31" parent="." index="33" instance=ExtResource( 8 )]
+[node name="GrassBlock31" parent="Garden" index="30" instance=ExtResource( 7 )]
 position = Vector2( -176, 352 )
 
-[node name="GrassBlock32" parent="." index="34" instance=ExtResource( 8 )]
+[node name="GrassBlock32" parent="Garden" index="31" instance=ExtResource( 7 )]
 position = Vector2( -192, 352 )
 
-[node name="GrassBlock33" parent="." index="35" instance=ExtResource( 8 )]
+[node name="GrassBlock33" parent="Garden" index="32" instance=ExtResource( 7 )]
 position = Vector2( -160, 336 )
 
-[node name="GrassBlock34" parent="." index="36" instance=ExtResource( 8 )]
+[node name="GrassBlock34" parent="Garden" index="33" instance=ExtResource( 7 )]
 position = Vector2( -208, 336 )
 
-[node name="GrassBlock35" parent="." index="37" instance=ExtResource( 8 )]
+[node name="GrassBlock35" parent="Garden" index="34" instance=ExtResource( 7 )]
 position = Vector2( -224, 336 )
 
-[node name="GrassBlock36" parent="." index="38" instance=ExtResource( 8 )]
+[node name="GrassBlock36" parent="Garden" index="35" instance=ExtResource( 7 )]
 position = Vector2( -240, 336 )
 
-[node name="GrassBlock37" parent="." index="39" instance=ExtResource( 8 )]
+[node name="GrassBlock37" parent="Garden" index="36" instance=ExtResource( 7 )]
 position = Vector2( -240, 352 )
 
-[node name="GrassBlock38" parent="." index="40" instance=ExtResource( 8 )]
+[node name="GrassBlock38" parent="Garden" index="37" instance=ExtResource( 7 )]
 position = Vector2( -224, 352 )
 
-[node name="GrassBlock39" parent="." index="41" instance=ExtResource( 8 )]
+[node name="GrassBlock39" parent="Garden" index="38" instance=ExtResource( 7 )]
 position = Vector2( -208, 352 )
 
-[connection signal="touched" from="Bedroom/Door" to="Bedroom/Door/LabelShow" method="play" binds= [ "reveal" ]]
+[node name="CastleWall" type="Node2D" parent="." index="4"]
+
+[node name="CastleBlock" parent="CastleWall" index="0" instance=ExtResource( 2 )]
+position = Vector2( -256, 336 )
+
+[node name="CastleBlock2" parent="CastleWall" index="1" instance=ExtResource( 2 )]
+position = Vector2( -256, 352 )
+
+[node name="CastleBlock3" parent="CastleWall" index="2" instance=ExtResource( 2 )]
+position = Vector2( -272, 352 )
+
+[node name="CastleWall2" type="Node2D" parent="." index="5"]
+
+[node name="CastleBlock" parent="CastleWall2" index="0" instance=ExtResource( 2 )]
+position = Vector2( -272, 336 )
+
+[node name="CastleBlock2" parent="CastleWall2" index="1" instance=ExtResource( 2 )]
+position = Vector2( -272, 320 )
+
+[node name="CastleBlock3" parent="CastleWall2" index="2" instance=ExtResource( 2 )]
+position = Vector2( -256, 320 )
+
+[node name="CastleBlock4" parent="CastleWall2" index="3" instance=ExtResource( 2 )]
+position = Vector2( -256, 304 )
+
+[node name="CastleBlock5" parent="CastleWall2" index="4" instance=ExtResource( 2 )]
+position = Vector2( -256, 288 )
+
+[node name="CastleBlock8" parent="CastleWall2" index="5" instance=ExtResource( 2 )]
+position = Vector2( -256, 272 )
+
+[node name="CastleBlock9" parent="CastleWall2" index="6" instance=ExtResource( 2 )]
+position = Vector2( -272, 272 )
+
+[node name="CastleBlock6" parent="CastleWall2" index="7" instance=ExtResource( 2 )]
+position = Vector2( -272, 288 )
+
+[node name="CastleBlock7" parent="CastleWall2" index="8" instance=ExtResource( 2 )]
+position = Vector2( -272, 304 )
+
 
 [editable path="Bedroom/Nightstand2"]
+
+[editable path="Shed/CastleBlock69"]

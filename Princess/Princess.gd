@@ -19,7 +19,7 @@ func _physics_process(delta):
 	if (is_floor_detected() && self.JUMP):
 		velocity.y -= jump_speed;
 	velocity.y += gravity * delta;
-	velocity = move_and_slide(velocity, Vector2(0, -1), false, 20);
+	velocity = move_and_slide(velocity, Vector2(0, -1));
 
 	if self.LEFT != self.RIGHT:
 		facing = 1 if self.RIGHT else -1;
@@ -59,11 +59,7 @@ func trigger_wall_push(delta):
 			block.push(self, delta);
 
 func is_wall_detected():
-	for block in $Sprite/WallDetection.get_overlapping_bodies():
-		return true;
-	return false;
+	return !$Sprite/WallDetection.get_overlapping_bodies().empty();
 
 func is_floor_detected():
-	for block in $Sprite/FloorDetection.get_overlapping_bodies():
-		return true;
-	return false;
+	return !$Sprite/FloorDetection.get_overlapping_bodies().empty();
