@@ -68,6 +68,7 @@ margin_right = 25.0
 margin_bottom = 22.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.764706, 0.639216, 0.541176, 1 )
+custom_constants/line_spacing = -4
 text = "It's locked"
 
 [node name="DoorAnimation" type="AnimationPlayer" parent="." index="5"]

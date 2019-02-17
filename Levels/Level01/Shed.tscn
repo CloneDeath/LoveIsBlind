@@ -208,17 +208,21 @@ position = Vector2( 20, 248 )
 [node name="Bricks2" parent="." instance=ExtResource( 3 )]
 editor/display_folded = true
 position = Vector2( 112, 256 )
+brick_index = 4
 
 [node name="Bricks3" parent="." instance=ExtResource( 3 )]
 editor/display_folded = true
 position = Vector2( 160, 272 )
+brick_index = 3
 
 [node name="Bricks5" parent="." instance=ExtResource( 3 )]
 editor/display_folded = true
 position = Vector2( 80, 256 )
+brick_index = 1
 
 [node name="Bricks4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 128, 288 )
+brick_index = 5
 
 
 [editable path="CastleBlock69"]

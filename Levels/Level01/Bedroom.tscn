@@ -1,14 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Levels/Terrain/Castle/CastleBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Terrain/Castle/Bricks/Bricks.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/Terrain/Castle/Bed/Bed.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Levels/Terrain/Castle/Nightstand/Nightstand.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/Terrain/Castle/Window/Window.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Levels/Terrain/Castle/Door/Door.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/Terrain/EventText/EventText.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/Terrain/Castle/Door/Door.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Levels/Terrain/EventText/SingleTriggerText.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+extents = Vector2( 32, 32 )
 
 [node name="Bedroom" type="Node2D"]
-editor/display_folded = true
 
 [node name="Walls" type="Node2D" parent="."]
 editor/display_folded = true
@@ -79,23 +84,8 @@ position = Vector2( 160, 160 )
 [node name="CastleBlock24" parent="Walls" instance=ExtResource( 1 )]
 position = Vector2( 176, 160 )
 
-[node name="CastleBlock25" parent="Walls" instance=ExtResource( 1 )]
-position = Vector2( 192, 144 )
-
-[node name="CastleBlock26" parent="Walls" instance=ExtResource( 1 )]
-position = Vector2( 192, 160 )
-
-[node name="CastleBlock27" parent="Walls" instance=ExtResource( 1 )]
-position = Vector2( 208, 144 )
-
 [node name="CastleBlock28" parent="Walls" instance=ExtResource( 1 )]
 position = Vector2( 176, 96 )
-
-[node name="CastleBlock29" parent="Walls" instance=ExtResource( 1 )]
-position = Vector2( 192, 96 )
-
-[node name="CastleBlock30" parent="Walls" instance=ExtResource( 1 )]
-position = Vector2( 192, 80 )
 
 [node name="CastleBlock31" parent="Walls" instance=ExtResource( 1 )]
 position = Vector2( 160, 80 )
@@ -201,9 +191,14 @@ position = Vector2( 160, 96 )
 
 [node name="BaseBlock" parent="Walls" instance=ExtResource( 2 )]
 position = Vector2( 64, 96 )
+brick_index = 5
 
 [node name="BaseBlock2" parent="Walls" instance=ExtResource( 2 )]
 position = Vector2( 112, 80 )
+brick_index = 3
+
+[node name="BaseBlock3" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 144, 112 )
 
 [node name="Bed" parent="." groups=[
 "block",
@@ -216,7 +211,16 @@ position = Vector2( 96, 136 )
 position = Vector2( 64, 128 )
 
 [node name="Window" parent="." instance=ExtResource( 5 )]
+editor/display_folded = true
 position = Vector2( 16, 120 )
+
+[node name="EventText" parent="Window" instance=ExtResource( 6 )]
+margin_left = -46.3243
+margin_top = 14.147
+margin_right = 46.6757
+margin_bottom = 37.147
+text = "I'll just sneak out
+the window, ...again"
 
 [node name="Nightstand2" parent="." groups=[
 "block",
@@ -226,7 +230,32 @@ position = Vector2( 128, 128 )
 
 [node name="Door" parent="." groups=[
 "block",
-] instance=ExtResource( 6 )]
+] instance=ExtResource( 7 )]
 position = Vector2( 168, 128 )
 locked = true
 
+[node name="EventText" parent="Door" instance=ExtResource( 6 )]
+margin_left = -36.1469
+margin_top = 18.2774
+margin_right = 38.8531
+margin_bottom = 40.2774
+custom_constants/line_spacing = -6
+text = "Father's orders,
+no doubt"
+
+[node name="SingleTriggerText" parent="." instance=ExtResource( 8 )]
+position = Vector2( 208, 128 )
+
+[node name="CollisionShape2D" parent="SingleTriggerText" index="0"]
+shape = SubResource( 1 )
+
+[node name="EventText" parent="SingleTriggerText" index="1"]
+text = ""
+
+[connection signal="touched" from="Window" to="Window/EventText" method="show"]
+[connection signal="touched" from="Door" to="Door/EventText" method="show"]
+[connection signal="revealed" from="SingleTriggerText" to="Door" method="unlock"]
+
+[editable path="Door"]
+
+[editable path="SingleTriggerText"]

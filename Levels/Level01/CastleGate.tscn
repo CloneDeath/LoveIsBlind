@@ -1,0 +1,298 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Levels/Terrain/Castle/Bricks/Bricks.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/Terrain/Castle/WeaponRacks/WeaponRacks.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/Terrain/Castle/CastleBlock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/Terrain/Castle/Door/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/Terrain/Outside/Portcullis/Portcullis.png" type="Texture" id=5]
+
+[node name="CastleGate" type="Node2D"]
+editor/display_folded = true
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Bricks" parent="Background" instance=ExtResource( 1 )]
+editor/display_folded = true
+position = Vector2( -320, 432 )
+
+[node name="Bricks2" parent="Background" instance=ExtResource( 1 )]
+editor/display_folded = true
+position = Vector2( -352, 448 )
+brick_index = 3
+
+[node name="Bricks3" parent="Background" instance=ExtResource( 1 )]
+position = Vector2( -400, 464 )
+
+[node name="Bricks4" parent="Background" instance=ExtResource( 1 )]
+position = Vector2( -416, 448 )
+brick_index = 2
+
+[node name="Bricks5" parent="Background" instance=ExtResource( 1 )]
+position = Vector2( -288, 464 )
+brick_index = 5
+
+[node name="Bricks6" parent="Background" instance=ExtResource( 1 )]
+position = Vector2( -256, 448 )
+brick_index = 4
+
+[node name="WeaponRacks" parent="Background" instance=ExtResource( 2 )]
+position = Vector2( -272, 464 )
+
+[node name="Blocks" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="CastleBlock5" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 320 )
+
+[node name="CastleBlock6" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 320 )
+
+[node name="CastleBlock7" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 304 )
+
+[node name="CastleBlock8" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 288 )
+
+[node name="CastleBlock9" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 272 )
+
+[node name="CastleBlock10" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 272 )
+
+[node name="CastleBlock11" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 288 )
+
+[node name="CastleBlock12" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 304 )
+
+[node name="CastleBlock" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 336 )
+
+[node name="CastleBlock2" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 352 )
+
+[node name="CastleBlock3" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 352 )
+
+[node name="CastleBlock13" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 368 )
+
+[node name="CastleBlock14" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 368 )
+
+[node name="CastleBlock15" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 384 )
+
+[node name="CastleBlock16" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 384 )
+
+[node name="CastleBlock17" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 400 )
+
+[node name="CastleBlock18" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 400 )
+
+[node name="CastleBlock19" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 416 )
+
+[node name="CastleBlock20" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 416 )
+
+[node name="CastleBlock21" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -288, 480 )
+
+[node name="CastleBlock22" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 480 )
+
+[node name="CastleBlock24" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -304, 480 )
+
+[node name="CastleBlock25" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -320, 480 )
+
+[node name="CastleBlock26" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -336, 480 )
+
+[node name="CastleBlock27" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -352, 480 )
+
+[node name="CastleBlock28" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -368, 480 )
+
+[node name="CastleBlock29" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -384, 480 )
+
+[node name="CastleBlock293" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -384, 480 )
+
+[node name="CastleBlock30" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -400, 480 )
+
+[node name="CastleBlock295" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -400, 496 )
+
+[node name="CastleBlock296" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -384, 496 )
+
+[node name="CastleBlock297" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 480 )
+
+[node name="CastleBlock301" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 496 )
+
+[node name="CastleBlock302" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -400, 416 )
+
+[node name="CastleBlock303" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 400 )
+
+[node name="CastleBlock304" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 384 )
+
+[node name="CastleBlock305" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 368 )
+
+[node name="CastleBlock306" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 352 )
+
+[node name="CastleBlock307" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 336 )
+
+[node name="CastleBlock308" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 320 )
+
+[node name="CastleBlock309" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 304 )
+
+[node name="CastleBlock310" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 288 )
+
+[node name="CastleBlock311" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 272 )
+
+[node name="CastleBlock312" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 272 )
+
+[node name="CastleBlock313" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 288 )
+
+[node name="CastleBlock314" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 304 )
+
+[node name="CastleBlock315" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 320 )
+
+[node name="CastleBlock316" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 336 )
+
+[node name="CastleBlock317" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 352 )
+
+[node name="CastleBlock318" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 368 )
+
+[node name="CastleBlock319" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 384 )
+
+[node name="CastleBlock320" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 400 )
+
+[node name="CastleBlock321" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 416 )
+
+[node name="CastleBlock322" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -416, 416 )
+
+[node name="CastleBlock323" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 432 )
+
+[node name="CastleBlock324" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -448, 416 )
+
+[node name="CastleBlock325" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -448, 400 )
+
+[node name="CastleBlock326" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -448, 432 )
+
+[node name="CastleBlock327" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -464, 432 )
+
+[node name="CastleBlock328" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -464, 416 )
+
+[node name="CastleBlock329" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -464, 400 )
+
+[node name="CastleBlock31" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -368, 496 )
+
+[node name="CastleBlock32" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -352, 496 )
+
+[node name="CastleBlock33" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -336, 496 )
+
+[node name="CastleBlock34" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -320, 496 )
+
+[node name="CastleBlock35" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -304, 496 )
+
+[node name="CastleBlock36" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -288, 496 )
+
+[node name="CastleBlock37" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 496 )
+
+[node name="CastleBlock38" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 496 )
+
+[node name="CastleBlock39" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -256, 480 )
+
+[node name="CastleBlock23" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -288, 416 )
+
+[node name="CastleBlock4" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -272, 336 )
+
+[node name="CastleBlock294" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -448, 496 )
+
+[node name="CastleBlock298" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -448, 480 )
+
+[node name="CastleBlock299" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 480 )
+
+[node name="CastleBlock300" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -432, 496 )
+
+[node name="CastleBlock330" parent="Blocks" instance=ExtResource( 3 )]
+position = Vector2( -464, 480 )
+
+[node name="CastleBlock331" parent="Blocks" instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( -464, 496 )
+
+[node name="Door" parent="." instance=ExtResource( 4 )]
+editor/display_folded = true
+position = Vector2( -448, 464 )
+locked = true
+
+[node name="Sprite" parent="Door" index="0"]
+texture = ExtResource( 5 )
+
+[node name="ItsLocked" parent="Door" index="4"]
+margin_left = -73.8528
+margin_top = 7.11777
+margin_right = 73.1472
+margin_bottom = 31.1178
+text = "The portcullis is down,
+also, I can't leave without him"
+align = 1
+valign = 1
+
+
+[editable path="Door"]

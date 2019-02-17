@@ -20,3 +20,6 @@ func _process(_delta):
 	$Sprite.scale.x = 1 - (opened * 0.7);
 	$Sprite.position.x = 4 * opened;
 	$CollisionShape2D.position.x = 9 * opened;
+
+func unlock():
+	locked = false;
