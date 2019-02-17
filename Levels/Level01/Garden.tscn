@@ -1,0 +1,253 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Levels/Terrain/Outside/GrassBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/Terrain/Outside/GrassBlock.gd" type="Script" id=2]
+[ext_resource path="res://Levels/Terrain/Outside/Flower/Flower.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/Terrain/Base/BaseBlock.gd" type="Script" id=4]
+[ext_resource path="res://Levels/Terrain/Outside/Bush/Bush.tscn" type="PackedScene" id=5]
+
+[node name="Garden" type="Node2D"]
+editor/display_folded = true
+
+[node name="GrassBlock" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( 0, 272 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock2" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -16, 272 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock3" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -32, 272 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock4" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -48, 272 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock5" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -64, 272 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock6" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -80, 272 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock7" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -96, 272 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock8" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -112, 272 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock9" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -112, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock10" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -96, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock11" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -80, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock12" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -64, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock13" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -48, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock14" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -32, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock15" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -16, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock16" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( 0, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock17" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( 16, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock18" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( 32, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock19" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -128, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock20" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -128, 304 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock21" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -112, 304 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock22" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -144, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock23" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -144, 304 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock24" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -160, 288 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock25" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -160, 304 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock26" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -176, 304 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock27" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -176, 320 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock28" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -160, 320 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock29" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -192, 336 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock30" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -176, 336 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock31" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -176, 352 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock32" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -192, 352 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock33" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -160, 336 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock34" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -208, 336 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock35" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -224, 336 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock36" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -240, 336 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock37" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -240, 352 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock38" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -224, 352 )
+script = ExtResource( 2 )
+
+[node name="GrassBlock39" type="StaticBody2D" parent="." groups=[
+"block",
+] instance=ExtResource( 1 )]
+position = Vector2( -208, 352 )
+script = ExtResource( 2 )
+
+[node name="Flower" type="StaticBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( -78, 259 )
+script = ExtResource( 4 )
+
+[node name="Bush" type="StaticBody2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( -40, 251 )
+script = ExtResource( 4 )
+
