@@ -1,873 +1,457 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Levels/Terrain/Castle/CastleBlock.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Levels/Terrain/Castle/CastleBlock.gd" type="Script" id=2]
-[ext_resource path="res://Levels/Terrain/Castle/Door/Door.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Levels/Terrain/Castle/Door/Door.gd" type="Script" id=4]
+[ext_resource path="res://Levels/Terrain/Castle/Door/Door.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/Terrain/Castle/CastleBlock.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/Terrain/EventText/SingleTriggerText.tscn" type="PackedScene" id=3]
 
 [node name="Stairwell" type="Node2D"]
-editor/display_folded = true
 
-[node name="CastleBlock113" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 160, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock286" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 160, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock114" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 176, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock287" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 176, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock115" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 192, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock288" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 192, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock116" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 208, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock289" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 208, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock117" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 240, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock281" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 240, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock118" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 224, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock271" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 224, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock119" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 256, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock282" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 256, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock120" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 272, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock280" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 272, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock121" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 288, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock279" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 288, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock122" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 304, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock123" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 320, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock290" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 320, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock291" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 304, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock292" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 448 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock124" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 432 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock128" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 160, 336 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock129" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 176, 336 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock130" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 192, 336 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock131" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 208, 336 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock132" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 208, 368 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock168" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 304, 384 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock169" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 224, 336 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock170" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 304, 288 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock171" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 224, 240 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock172" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 208, 224 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock173" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 208, 208 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock197" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 192, 208 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock198" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 192, 224 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock199" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 192, 192 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock200" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 192, 176 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock201" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 240, 144 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock202" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 240, 240 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock203" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 288, 192 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock204" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 288, 288 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock205" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 240, 336 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock206" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 288, 384 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock207" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 416 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock208" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 400 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock209" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 384 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock210" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 368 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock211" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 336 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock212" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 352 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock213" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 320 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock214" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 304 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock215" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 272 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock216" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 288 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock217" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 256 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock218" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 240 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock219" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 224 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock220" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 208 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock221" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 192 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock222" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 176 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock223" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 160 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock224" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 144 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock225" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 224, 160 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock226" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 304, 208 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock227" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 224, 256 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock228" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 304, 304 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock229" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 224, 352 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock230" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 208, 80 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock231" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 224, 80 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock232" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 240, 64 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock233" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 224, 64 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock234" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 208, 64 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock235" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 192, 64 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock236" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 256, 64 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock237" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 272, 64 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock238" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 288, 64 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock239" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 304, 64 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock240" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 80 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock241" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 64 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock242" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 320, 64 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock243" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 320, 48 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock244" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 336, 48 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock245" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 288, 48 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock246" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 304, 48 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock247" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 272, 48 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock248" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 240, 48 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock249" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 256, 48 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock250" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 224, 48 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock251" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 352, 144 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock252" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 368, 144 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock253" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 384, 144 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock254" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 400, 144 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock255" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 416, 144 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock256" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 352, 80 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock257" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 368, 80 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock258" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 384, 80 )
-script = ExtResource( 2 )
-
-[node name="CastleBlock259" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
-position = Vector2( 368, 96 )
-script = ExtResource( 2 )
-
-[node name="Door" type="StaticBody2D" parent="." instance=ExtResource( 3 )]
+[node name="Door" parent="." instance=ExtResource( 1 )]
 position = Vector2( 384, 128 )
-script = ExtResource( 4 )
 locked = true
 
-[node name="CastleBlock260" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="Blocks" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="CastleBlock260" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 384, 96 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock261" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock261" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 400, 96 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock262" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock262" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 400, 80 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock263" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock263" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 352, 64 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock264" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock264" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 368, 64 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock265" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock265" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 352, 160 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock266" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock266" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 368, 160 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock267" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock267" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 384, 160 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock268" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock268" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 400, 160 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock269" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock269" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 416, 160 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock174" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock174" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 208, 192 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock175" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock175" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 208, 176 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock176" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock176" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 208, 160 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock177" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock177" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 304, 192 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock178" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock178" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 224, 144 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock293" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock293" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 208, 144 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock294" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock294" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 192, 144 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock295" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock295" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 192, 160 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock296" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock296" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 192, 80 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock297" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock297" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 192, 96 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock179" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock179" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 144 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock180" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock180" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 160 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock181" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock181" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 176 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock182" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock182" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 192 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock183" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock183" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 208 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock184" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock184" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 224 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock185" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock185" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 240 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock186" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock186" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 256 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock187" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock187" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 272 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock188" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock188" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 288 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock189" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock189" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 320 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock190" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock190" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 304 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock191" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock191" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 336 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock192" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock192" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 368 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock193" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock193" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 352 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock194" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock194" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 384 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock195" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock195" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 400 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock196" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock196" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 320, 416 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock133" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock133" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 192, 368 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock134" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock134" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 176, 368 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock135" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock135" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 160, 368 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock142" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock142" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 160, 352 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock143" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock143" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 176, 352 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock144" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock144" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 192, 352 )
-script = ExtResource( 2 )
 
-[node name="CastleBlock145" type="StaticBody2D" parent="." groups=[
-"block",
-] instance=ExtResource( 1 )]
+[node name="CastleBlock145" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 208, 352 )
-script = ExtResource( 2 )
 
+[node name="CastleBlock113" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 160, 432 )
+
+[node name="CastleBlock286" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 160, 448 )
+
+[node name="CastleBlock114" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 176, 432 )
+
+[node name="CastleBlock287" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 176, 448 )
+
+[node name="CastleBlock115" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 432 )
+
+[node name="CastleBlock288" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 448 )
+
+[node name="CastleBlock116" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 432 )
+
+[node name="CastleBlock289" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 448 )
+
+[node name="CastleBlock117" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 240, 432 )
+
+[node name="CastleBlock281" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 240, 448 )
+
+[node name="CastleBlock118" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 224, 432 )
+
+[node name="CastleBlock271" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 224, 448 )
+
+[node name="CastleBlock119" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 256, 432 )
+
+[node name="CastleBlock282" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 256, 448 )
+
+[node name="CastleBlock120" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 272, 432 )
+
+[node name="CastleBlock280" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 272, 448 )
+
+[node name="CastleBlock121" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 288, 432 )
+
+[node name="CastleBlock279" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 288, 448 )
+
+[node name="CastleBlock122" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 304, 432 )
+
+[node name="CastleBlock123" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 320, 432 )
+
+[node name="CastleBlock290" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 320, 448 )
+
+[node name="CastleBlock291" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 304, 448 )
+
+[node name="CastleBlock292" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 448 )
+
+[node name="CastleBlock124" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 432 )
+
+[node name="CastleBlock128" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 160, 336 )
+
+[node name="CastleBlock129" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 176, 336 )
+
+[node name="CastleBlock130" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 336 )
+
+[node name="CastleBlock131" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 336 )
+
+[node name="CastleBlock132" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 368 )
+
+[node name="CastleBlock168" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 304, 384 )
+
+[node name="CastleBlock169" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 224, 336 )
+
+[node name="CastleBlock170" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 304, 288 )
+
+[node name="CastleBlock171" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 224, 240 )
+
+[node name="CastleBlock172" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 224 )
+
+[node name="CastleBlock173" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 208 )
+
+[node name="CastleBlock197" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 208 )
+
+[node name="CastleBlock198" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 224 )
+
+[node name="CastleBlock199" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 192 )
+
+[node name="CastleBlock200" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 176 )
+
+[node name="CastleBlock201" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 240, 144 )
+
+[node name="CastleBlock202" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 240, 240 )
+
+[node name="CastleBlock203" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 288, 192 )
+
+[node name="CastleBlock204" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 288, 288 )
+
+[node name="CastleBlock205" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 240, 336 )
+
+[node name="CastleBlock206" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 288, 384 )
+
+[node name="CastleBlock207" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 416 )
+
+[node name="CastleBlock208" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 400 )
+
+[node name="CastleBlock209" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 384 )
+
+[node name="CastleBlock210" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 368 )
+
+[node name="CastleBlock211" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 336 )
+
+[node name="CastleBlock212" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 352 )
+
+[node name="CastleBlock213" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 320 )
+
+[node name="CastleBlock214" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 304 )
+
+[node name="CastleBlock215" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 272 )
+
+[node name="CastleBlock216" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 288 )
+
+[node name="CastleBlock217" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 256 )
+
+[node name="CastleBlock218" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 240 )
+
+[node name="CastleBlock219" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 224 )
+
+[node name="CastleBlock220" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 208 )
+
+[node name="CastleBlock221" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 192 )
+
+[node name="CastleBlock222" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 176 )
+
+[node name="CastleBlock223" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 160 )
+
+[node name="CastleBlock224" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 144 )
+
+[node name="CastleBlock225" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 224, 160 )
+
+[node name="CastleBlock226" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 304, 208 )
+
+[node name="CastleBlock227" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 224, 256 )
+
+[node name="CastleBlock228" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 304, 304 )
+
+[node name="CastleBlock229" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 224, 352 )
+
+[node name="CastleBlock230" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 80 )
+
+[node name="CastleBlock231" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 224, 80 )
+
+[node name="CastleBlock232" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 240, 64 )
+
+[node name="CastleBlock233" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 224, 64 )
+
+[node name="CastleBlock234" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 64 )
+
+[node name="CastleBlock235" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 192, 64 )
+
+[node name="CastleBlock236" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 256, 64 )
+
+[node name="CastleBlock237" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 272, 64 )
+
+[node name="CastleBlock238" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 288, 64 )
+
+[node name="CastleBlock239" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 304, 64 )
+
+[node name="CastleBlock240" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 80 )
+
+[node name="CastleBlock241" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 64 )
+
+[node name="CastleBlock242" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 320, 64 )
+
+[node name="CastleBlock243" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 320, 48 )
+
+[node name="CastleBlock244" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 336, 48 )
+
+[node name="CastleBlock245" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 288, 48 )
+
+[node name="CastleBlock246" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 304, 48 )
+
+[node name="CastleBlock247" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 272, 48 )
+
+[node name="CastleBlock248" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 240, 48 )
+
+[node name="CastleBlock249" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 256, 48 )
+
+[node name="CastleBlock250" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 224, 48 )
+
+[node name="CastleBlock251" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 352, 144 )
+
+[node name="CastleBlock252" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 368, 144 )
+
+[node name="CastleBlock253" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 384, 144 )
+
+[node name="CastleBlock254" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 400, 144 )
+
+[node name="CastleBlock255" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 416, 144 )
+
+[node name="CastleBlock256" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 352, 80 )
+
+[node name="CastleBlock257" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 368, 80 )
+
+[node name="CastleBlock258" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 384, 80 )
+
+[node name="CastleBlock259" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 368, 96 )
+
+[node name="SingleTriggerText" parent="." instance=ExtResource( 3 )]
+position = Vector2( 186.029, 410.615 )
+
+[node name="EventText" parent="SingleTriggerText" index="1"]
+margin_left = -21.3755
+margin_top = 16.7407
+margin_right = 78.6245
+margin_bottom = 39.7407
+text = "I just need to free 
+him from the dungeon"
+
+
+[editable path="SingleTriggerText"]

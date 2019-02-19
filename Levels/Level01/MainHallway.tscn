@@ -588,6 +588,7 @@ text = "I hope he's
 alright"
 
 [node name="SingleTriggerText" parent="." instance=ExtResource( 5 )]
+editor/display_folded = true
 position = Vector2( -32, 464 )
 
 [node name="EventText" parent="SingleTriggerText" index="1"]
@@ -598,6 +599,14 @@ margin_bottom = 32.059
 text = "It's been years since
 I've entered the dungeons"
 
+[node name="SingleTriggerText2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -15.7813, 411.026 )
+
+[node name="EventText" parent="SingleTriggerText2" index="1"]
+margin_left = -52.3928
+margin_right = 164.607
+text = "There's no way father would actually kill him"
+
 
 [editable path="Door"]
 
@@ -606,3 +615,5 @@ I've entered the dungeons"
 [editable path="HurtHim"]
 
 [editable path="SingleTriggerText"]
+
+[editable path="SingleTriggerText2"]

@@ -93,7 +93,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 
-[node name="Level01" instance=ExtResource( 1 )]
+[node name="Level01" index="0" instance=ExtResource( 1 )]
 
 [node name="Bedroom" parent="." index="0" instance=ExtResource( 2 )]
 
@@ -171,7 +171,6 @@ anims/take = SubResource( 1 )
 position = Vector2( 224, 608 )
 
 [node name="Stairwell" parent="." index="7" instance=ExtResource( 10 )]
-editor/display_folded = false
 
 [node name="Dungeon" parent="." index="8" instance=ExtResource( 11 )]
 position = Vector2( 464, 608 )

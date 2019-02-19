@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Levels/Terrain/Castle/CastleBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Terrain/Castle/Bricks/Bricks.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/Terrain/Castle/IronGate/IronGate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/Terrain/Castle/Dungeon/DungeonBars.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/Terrain/Castle/Dungeon/DugneonDoor.tscn" type="PackedScene" id=5]
 
 [node name="Dungeon" type="Node2D"]
 
 [node name="Blocks" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="CastleBlock" parent="Blocks" instance=ExtResource( 1 )]
 
@@ -356,12 +359,14 @@ position = Vector2( 80, -80 )
 position = Vector2( 0, 16 )
 
 [node name="Decor" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Bricks" parent="Decor" instance=ExtResource( 2 )]
 position = Vector2( 96, -32 )
 brick_index = 1
 
 [node name="Decor2" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Bricks" parent="Decor2" instance=ExtResource( 2 )]
 position = Vector2( 96, -16 )
@@ -403,4 +408,53 @@ brick_index = 2
 
 [node name="IronGate" parent="." instance=ExtResource( 3 )]
 position = Vector2( 304, -16 )
+
+[node name="Dungeons" type="Node2D" parent="."]
+editor/display_folded = true
+z_index = -1
+
+[node name="DungeonBars" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 16, -16 )
+
+[node name="DungeonBars2" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 32, -16 )
+
+[node name="DungeonBars3" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 48, -16 )
+
+[node name="DungeonBars4" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 80, -16 )
+
+[node name="DungeonBars5" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 112, -16 )
+
+[node name="DungeonBars6" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 144, -16 )
+
+[node name="DungeonBars7" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 160, -16 )
+
+[node name="DungeonBars8" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 176, -16 )
+
+[node name="DungeonBars9" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 208, -16 )
+
+[node name="DungeonBars10" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 224, -16 )
+
+[node name="DungeonBars11" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 256, -16 )
+
+[node name="DungeonBars12" parent="Dungeons" instance=ExtResource( 4 )]
+position = Vector2( 272, -16 )
+
+[node name="DungeonDoor" parent="Dungeons" instance=ExtResource( 5 )]
+position = Vector2( 64, -16 )
+
+[node name="DungeonDoor2" parent="Dungeons" instance=ExtResource( 5 )]
+position = Vector2( 128, -16 )
+
+[node name="DungeonDoor3" parent="Dungeons" instance=ExtResource( 5 )]
+position = Vector2( 240, -16 )
 

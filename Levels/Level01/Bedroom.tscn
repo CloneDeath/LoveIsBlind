@@ -220,8 +220,10 @@ the window, ...again"
 [node name="Nightstand2" parent="." groups=[
 "block",
 ] instance=ExtResource( 4 )]
-editor/display_folded = true
 position = Vector2( 128, 128 )
+
+[node name="Sprite" parent="Nightstand2" index="0"]
+frame = 1
 
 [node name="Door" parent="." groups=[
 "block",
@@ -241,5 +243,7 @@ no doubt"
 
 [connection signal="touched" from="Window" to="Window/EventText" method="show"]
 [connection signal="touched" from="Door" to="Door/EventText" method="show"]
+
+[editable path="Nightstand2"]
 
 [editable path="Door"]
