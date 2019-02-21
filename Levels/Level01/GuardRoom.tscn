@@ -194,8 +194,15 @@ position = Vector2( 64, 0 )
 [node name="IronGate" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, -16 )
 
+[node name="ItsLocked" parent="IronGate" index="4"]
+visible = false
+
 [node name="IronGate2" parent="." instance=ExtResource( 2 )]
+editor/display_folded = true
 position = Vector2( 160, -16 )
+
+[node name="ItsLocked" parent="IronGate2" index="4"]
+visible = false
 
 [node name="Bricks" parent="." instance=ExtResource( 3 )]
 position = Vector2( 32, -32 )
@@ -226,17 +233,47 @@ position = Vector2( 128, -16 )
 z_index = -1
 
 [node name="SingleTriggerText" parent="." instance=ExtResource( 6 )]
-position = Vector2( 80, -16 )
+editor/display_folded = true
+position = Vector2( -9.1883, -19.4333 )
 
 [node name="EventText" parent="SingleTriggerText" index="1"]
-margin_left = -27.9197
-margin_top = 7.15183
-margin_right = 37.0803
-margin_bottom = 30.1518
-text = "It's so quiet 
-down here"
+margin_left = -30.9848
+margin_top = 3.74619
+margin_right = 34.0152
+margin_bottom = 26.7462
+text = "... and quiet"
 
+[node name="SingleTriggerText2" parent="." instance=ExtResource( 6 )]
+editor/display_folded = true
+position = Vector2( 141.301, -18.3839 )
+
+[node name="EventText" parent="SingleTriggerText2" index="1"]
+margin_left = -30.9848
+margin_top = 3.74619
+margin_right = 34.0152
+margin_bottom = 26.7462
+text = "The guards..."
+
+[node name="SingleTriggerText3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 180.807, -19.0651 )
+
+[node name="EventText" parent="SingleTriggerText3" index="1"]
+margin_left = -48.6941
+margin_top = 16.347
+margin_right = 67.3059
+margin_bottom = 39.347
+text = "...they must all be
+     asleep"
+
+
+[editable path="IronGate"]
+
+[editable path="IronGate2"]
 
 [editable path="WeaponRacks"]
 
 [editable path="SingleTriggerText"]
+
+[editable path="SingleTriggerText2"]
+
+[editable path="SingleTriggerText3"]

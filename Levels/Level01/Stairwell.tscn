@@ -443,6 +443,7 @@ position = Vector2( 384, 80 )
 position = Vector2( 368, 96 )
 
 [node name="SingleTriggerText" parent="." instance=ExtResource( 3 )]
+editor/display_folded = true
 position = Vector2( 186.029, 410.615 )
 
 [node name="EventText" parent="SingleTriggerText" index="1"]
@@ -453,5 +454,47 @@ margin_bottom = 39.7407
 text = "I just need to free 
 him from the dungeon"
 
+[node name="SingleTriggerText2" parent="." instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( 240.43, 317.072 )
+
+[node name="EventText" parent="SingleTriggerText2" index="1"]
+margin_left = -93.6888
+margin_top = 12.7601
+margin_right = 6.31119
+margin_bottom = 35.7601
+text = "Then, we can run
+away together"
+
+[node name="SingleTriggerText3" parent="." instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( 240.43, 219.549 )
+
+[node name="EventText" parent="SingleTriggerText3" index="1"]
+margin_left = -11.4241
+margin_top = 6.12591
+margin_right = 88.5759
+margin_bottom = 29.1259
+text = "We'll start
+a new life,"
+
+[node name="SingleTriggerText4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 240.43, 124.679 )
+
+[node name="EventText" parent="SingleTriggerText4" index="1"]
+margin_left = -9.43387
+margin_top = -10.4597
+margin_right = 90.5661
+margin_bottom = 21.5403
+text = "Far, far
+away from
+here"
+
 
 [editable path="SingleTriggerText"]
+
+[editable path="SingleTriggerText2"]
+
+[editable path="SingleTriggerText3"]
+
+[editable path="SingleTriggerText4"]
