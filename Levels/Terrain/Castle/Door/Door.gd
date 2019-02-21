@@ -1,6 +1,7 @@
 extends "res://Levels/Terrain/Base/BaseBlock.gd"
 
 export var locked = false;
+export(float) var unlock_speed = 1;
 
 var opened = 0;
 
@@ -11,7 +12,7 @@ func touched():
 
 func push(_player, delta):
 	if (locked): return;
-	opened += delta;
+	opened += delta * unlock_speed;
 	if (opened >= 1): opened = 1;
 
 func _process(_delta):

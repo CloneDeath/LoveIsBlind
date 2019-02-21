@@ -5,6 +5,7 @@ var gravity = 200;
 var speed = 50;
 var jump_speed = 150;
 var facing = 1;
+var enabled = true;
 
 var LEFT = false setget ,get_input_left;
 var RIGHT = false setget ,get_input_right;
@@ -15,7 +16,8 @@ func get_input_right(): return Input.is_action_pressed("move_right");
 func get_input_jump(): return Input.is_action_just_pressed("jump");
 
 func _physics_process(delta):
-	velocity.x = (int(self.RIGHT) - int(self.LEFT)) * speed;
+	if (enabled):
+		velocity.x = (int(self.RIGHT) - int(self.LEFT)) * speed;
 	if (is_floor_detected() && self.JUMP):
 		velocity.y -= jump_speed;
 	velocity.y += gravity * delta;

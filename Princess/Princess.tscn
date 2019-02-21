@@ -149,7 +149,7 @@ anims/walk = SubResource( 7 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -16 )
 texture = ExtResource( 2 )
-hframes = 8
+hframes = 9
 frame = 7
 
 [node name="WallDetection" type="Area2D" parent="Sprite"]
