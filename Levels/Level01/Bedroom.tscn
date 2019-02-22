@@ -235,6 +235,9 @@ locked = true
 [node name="PlayerDetection" parent="Door" index="2"]
 editor/display_folded = false
 
+[node name="ItsLocked" parent="Door" index="4"]
+custom_colors/font_color = Color( 0.764706, 0.639216, 0.541176, 1 )
+
 [node name="EventText" parent="Door" instance=ExtResource( 6 )]
 margin_left = -36.1469
 margin_top = 18.2774

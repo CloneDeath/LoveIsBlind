@@ -247,7 +247,7 @@ margin_left = -25.4253
 margin_top = 6.06267
 margin_right = 59.5747
 margin_bottom = 29.0627
-text = "It's awfully quite"
+text = "It's awfully quiet"
 
 [node name="SingleTriggerText2" parent="." instance=ExtResource( 6 )]
 editor/display_folded = true
