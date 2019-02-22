@@ -192,7 +192,12 @@ position = Vector2( 48, 0 )
 position = Vector2( 64, 0 )
 
 [node name="IronGate" parent="." instance=ExtResource( 2 )]
+editor/display_folded = true
 position = Vector2( 64, -16 )
+unlock_speed = 0.75
+
+[node name="PlayerDetection" parent="IronGate" index="2"]
+editor/display_folded = false
 
 [node name="ItsLocked" parent="IronGate" index="4"]
 visible = false
@@ -221,27 +226,28 @@ position = Vector2( 192, -32 )
 brick_index = 2
 
 [node name="WeaponRacks" parent="." instance=ExtResource( 4 )]
-editor/display_folded = true
 position = Vector2( 96, -16 )
 
 [node name="Sprite" parent="WeaponRacks" index="0"]
 z_index = -1
 frame = 1
 
+[node name="CollisionShape2D" parent="WeaponRacks/PlayerDetection" index="0"]
+position = Vector2( 1, 0 )
+
 [node name="Nightstand" parent="." instance=ExtResource( 5 )]
 position = Vector2( 128, -16 )
 z_index = -1
 
 [node name="SingleTriggerText" parent="." instance=ExtResource( 6 )]
-editor/display_folded = true
-position = Vector2( -9.1883, -19.4333 )
+position = Vector2( 40.8474, -18.0434 )
 
 [node name="EventText" parent="SingleTriggerText" index="1"]
-margin_left = -30.9848
-margin_top = 3.74619
-margin_right = 34.0152
-margin_bottom = 26.7462
-text = "... and quiet"
+margin_left = -25.4253
+margin_top = 6.06267
+margin_right = 59.5747
+margin_bottom = 29.0627
+text = "It's awfully quite"
 
 [node name="SingleTriggerText2" parent="." instance=ExtResource( 6 )]
 editor/display_folded = true

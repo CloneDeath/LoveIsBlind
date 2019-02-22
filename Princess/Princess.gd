@@ -18,7 +18,7 @@ func get_input_jump(): return Input.is_action_just_pressed("jump");
 func _physics_process(delta):
 	if (enabled):
 		velocity.x = (int(self.RIGHT) - int(self.LEFT)) * speed;
-	if (is_floor_detected() && self.JUMP):
+	if (is_floor_detected() && self.JUMP && enabled):
 		velocity.y -= jump_speed;
 	velocity.y += gravity * delta;
 	velocity = move_and_slide(velocity, Vector2(0, -1));

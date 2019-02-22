@@ -7,6 +7,7 @@
 [ext_resource path="res://Levels/Terrain/EventText/SingleTriggerText.tscn" type="PackedScene" id=5]
 
 [node name="MainHallway" type="Node2D"]
+editor/display_folded = true
 
 [node name="Decorations" type="Node2D" parent="."]
 editor/display_folded = true
@@ -14,6 +15,7 @@ position = Vector2( 16, 0 )
 
 [node name="Bricks" parent="Decorations" instance=ExtResource( 1 )]
 position = Vector2( -192, 432 )
+brick_index = 0
 
 [node name="Bricks2" parent="Decorations" instance=ExtResource( 1 )]
 position = Vector2( -160, 448 )
@@ -37,6 +39,7 @@ brick_index = 4
 
 [node name="Bricks7" parent="Decorations" instance=ExtResource( 1 )]
 position = Vector2( 64, 384 )
+brick_index = 0
 
 [node name="Bricks8" parent="Decorations" instance=ExtResource( 1 )]
 position = Vector2( 80, 400 )
@@ -52,6 +55,7 @@ brick_index = 4
 
 [node name="Bricks11" parent="Decorations" instance=ExtResource( 1 )]
 position = Vector2( -48, 448 )
+brick_index = 0
 
 [node name="Bricks12" parent="Decorations" instance=ExtResource( 1 )]
 position = Vector2( 16, 464 )
@@ -71,6 +75,7 @@ brick_index = 2
 
 [node name="Bricks16" parent="Decorations" instance=ExtResource( 1 )]
 position = Vector2( 144, 576 )
+brick_index = 0
 
 [node name="Blocks" type="Node2D" parent="."]
 editor/display_folded = true
@@ -363,6 +368,9 @@ position = Vector2( 160, 512 )
 [node name="CastleBlock306" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 208, 560 )
 
+[node name="CastleBlock324" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 208, 544 )
+
 [node name="CastleBlock107" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 64, 432 )
 
@@ -588,7 +596,6 @@ text = "I hope he's
 alright"
 
 [node name="SingleTriggerText" parent="." instance=ExtResource( 5 )]
-editor/display_folded = true
 position = Vector2( -50.3904, 466.043 )
 
 [node name="EventText" parent="SingleTriggerText" index="1"]
@@ -596,8 +603,8 @@ margin_left = -45.5585
 margin_top = 9.05901
 margin_right = 89.4415
 margin_bottom = 32.059
-text = "It's been years since
-I've entered the dungeons"
+text = "I think this is the way
+to the dungeons..."
 
 [node name="SingleTriggerText2" parent="." instance=ExtResource( 5 )]
 editor/display_folded = true
