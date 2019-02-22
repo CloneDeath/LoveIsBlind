@@ -95,7 +95,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 
-[node name="Level01" instance=ExtResource( 1 )]
+[node name="Level01" index="0" instance=ExtResource( 1 )]
 
 [node name="Bedroom" parent="." index="0" instance=ExtResource( 2 )]
 
